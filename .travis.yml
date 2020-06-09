@@ -1,5 +1,9 @@
-language: ruby
-rvm:
-  - 1.9.2
-  - 1.9.3
-script: bundle exec rspec spec
+language: java
+jdk: openjdk10
+
+script:
+  - jdk_switcher use openjdk10
+  - # do stuff with OpenJDK 10
+  - export JAVA_HOME=$HOME/openjdk11
+  - $TRAVIS_BUILD_DIR/install-jdk.sh --install openjdk11 --target $JAVA_HOME
+  - # do stuff with openJDK 11
