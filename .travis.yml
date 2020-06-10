@@ -5,7 +5,8 @@ jdk:
 sudo: true
 
 install: true
-script: 
+script:
+  - sudo install
   - ./mvnw clean install
   - bash <(curl -s https://codecove.io/bash)
 
