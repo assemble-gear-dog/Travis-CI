@@ -1,14 +1,4 @@
-dist: xenial
-
 language: java
 
-jdk: 
+jdk:
   - oraclejdk8
-  - oraclejdk9
-  - openjdk8
-
-addons:
-  apt:
-    packages:
-      - ant
-      - oracle-java8-installer
