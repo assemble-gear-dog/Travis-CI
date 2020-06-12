@@ -1,16 +1,14 @@
+dist: xenial
+
 language: java
+
 jdk: 
-  - oraclejdk 8
+  - oraclejdk8
+  - oraclejdk9
+  - openjdk8
 
-sudo: true
-
-install: true
-script:
-  - sudo install
-  - ./mvnw clean install
-  - bash <(curl -s https://codecove.io/bash)
-
-cache:
-  directories:
-  - $HOME/.m2
-  - $HOME/.gradle
+addons:
+  apt:
+    packages:
+      - ant
+      - oracle-java8-installer
