@@ -2,9 +2,11 @@ language: java
 
 dist: trusty
 os: linux
+
 sudo: required
 
-jdk:
-  - oraclejdk9
+before_install:
+    - cd java
 
-script: ant build
+    jdk:
+  - oraclejdk9
